@@ -2,7 +2,8 @@ const todoInput = document.querySelector('.todo-input');
 const addTodoBtn = document.querySelector('.add-todo');
 const form = document.getElementsByTagName('form');
 
-addTodoBtn.addEventListener('click', () => {
+addTodoBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     if(todoInput.value.trim() != 0){
         let localItems = JSON.parse( localStorage.getItem('localItem'))
      if(localItems === null){
